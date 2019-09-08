@@ -1,5 +1,5 @@
 
-#Paleta de Colores Utilizados
+# Paleta de Colores Utilizados
 
 // SASS style sheet */
 // Palette color codes */
