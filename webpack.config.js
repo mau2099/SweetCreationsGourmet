@@ -42,7 +42,7 @@ module.exports = {
             options: { name: 'assets/[hash].[ext]' }
           }
         ]
-      }
+      },
     ]
   },
   devServer: {
