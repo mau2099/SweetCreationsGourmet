@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import NotFound from './components/NotFound';
+import ReactDom from 'react-dom';
+import App from './routes/App';
 
-ReactDOM.render(<NotFound />, document.getElementById('app'));
+ReactDom.render(<App />, document.getElementById('app'));
