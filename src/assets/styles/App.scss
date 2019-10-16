@@ -1,7 +1,8 @@
-@import './Variables.scss';
-@import './Classes.scss';
+@import "./Variables.scss";
+@import "./Classes.scss";
 
-html, body{
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -10,10 +11,17 @@ html, body{
   background-color: #eee;
 }
 
-#app{
+body {
+  margin-top: 85px;
+}
+#app {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   // @extend .flex-center;
 }
 
-
+.App__childrenContainer {
+  min-height: 70%;
+}
