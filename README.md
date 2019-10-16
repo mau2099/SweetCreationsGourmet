@@ -101,7 +101,7 @@ _Modify webpack.config.js_ in order to accept routes in **dev environment**
 
 ## Contributors
 
-- [Mauricio García](mau2099.dev)
+- [Mauricio García](https://mau2099.dev)
 - [Alexis Araujo](alexisaraujo.com/)
 - [Alfredo Plata](https://github.com/alfredo15)
 
