@@ -2,7 +2,7 @@
 
 ## Description
 
-eCommerce demo developed in [Platzi - Professional Javascript Career](https://platzi.com/clases/1711-escuela-de-javascript/22875-e-commerce/)
+eCommerce demo developed based on [Platzi - Professional Javascript Career](https://platzi.com/clases/1711-escuela-de-javascript/22875-e-commerce/)
 
 **_Developed from scratch_**
 
