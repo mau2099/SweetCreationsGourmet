@@ -7,7 +7,8 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "start:dev": "nodemon src/server/index.js --exact babel-node"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.7.0",
+    "autoprefixer": "^9.7.1",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
@@ -46,8 +49,17 @@
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.5.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "postcss-loader": "^3.0.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "react-router-dom": "^5.1.2"
+    "react-hot-loader": "^4.12.16",
+    "react-router-dom": "^5.1.2",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
   }
 }

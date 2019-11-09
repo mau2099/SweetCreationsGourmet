@@ -86,6 +86,10 @@ _Modify webpack.config.js_ in order to accept routes in **dev environment**
 
 - [Referencias](https://material-ui.com/es/getting-started/installation/)
 
+### Configuracion Server Side
+
+`npm i react-hot-loader babel-plugin-transform-object-assign babel-plugin-transform-class-properties`
+
 ### Git
 
 #### Create a new brach
