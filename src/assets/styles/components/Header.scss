@@ -26,9 +26,9 @@
 .header_area .classy-navbar,
 .header_area .header-meta {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  min-width: 50%;
+  // -ms-flex: 0 0 50%;
+  // flex: 0 0 50%;
+  // min-width: 50%;
   width: 50%;
 }
 @media only screen and (max-width: 767px) {
@@ -576,9 +576,10 @@
 
 .header__logo {
   width: 70px;
+  margin-right: 1em;
 }
 
-.div__header--block{
+.div__header--block {
   position: relative;
   display: block;
 }

@@ -1,8 +1,10 @@
+@import "../Variables.scss";
+
 .footer {
   position: fixed;
   bottom: 0;
   align-items: center;
-  background-color: #8f57fd;
+  background-color: $color-background-4;
   display: flex;
   height: 50px;
   width: 100%;

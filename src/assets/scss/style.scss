@@ -320,6 +320,7 @@ img {
     left: 0;
     width: 100%;
     border-bottom: 1px solid $border-color;
+    background-color: white;
     @include trans-duration(500ms);
     .classy-nav-container {
         @media #{$breakpoint-xs} {
@@ -334,8 +335,8 @@ img {
     }
     .classy-navbar,
     .header-meta {
-        @include flex(0 0 50%);
-        min-width: 50%;
+        // @include flex(0 0 50%);
+        // min-width: 50%;
         width: 50%;
         @media #{$breakpoint-xs} {
             @include flex(0 0 100%);
