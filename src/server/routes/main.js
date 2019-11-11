@@ -12,7 +12,15 @@ import render from '../render';
 
 const main = (req, res, next) => {
   try {
-    const store = createStore(reducer, initialState, composeEnhancers());
+    const store = createStore(reducer, initialState);
+    const html = renderToString(
+      <Provider store={store}>
+        <StaticRouter location={req.url} context={{}}>
+          <Layout>{renderRoutes(Routes)}</Layout>
+        </StaticRouter>
+      </Provider>,
+    );
+    res.send(render(html));
   } catch (err) {
     next(err);
   }

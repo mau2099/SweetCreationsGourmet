@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import webpack from 'webpack';
+import main from './routes/main';
 
 dotenv.config();
 
@@ -27,7 +28,7 @@ if (ENV === 'development') {
   app.use(webpackHotMiddleware(compiler));
 }
 
-app.get('*');
+app.get('*', main);
 
 app.listen(PORT, err => {
   if (err) console.log(err);
