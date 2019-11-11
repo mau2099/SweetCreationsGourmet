@@ -111,7 +111,7 @@ module.exports = {
           test: /\.js$|\.css$/,
           filename: '[path].gz',
         })
-      : false,
-    isProd ? new ManifestPlugin() : false,
+      : () => {},
+    isProd ? new ManifestPlugin() : () => {},
   ],
 };
