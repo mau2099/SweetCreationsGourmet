@@ -1,0 +1,48 @@
+//https://paletton.com/#uid=30u0+0kllllxjshpjxjhnafafep
+
+$color-primary-1: #00660d; // Main Primary color */
+$color-primary-2: #13b627;
+$color-primary-3: #078717;
+$color-primary-4: #003f08;
+$color-primary-5: #001503;
+
+// Main Secondary color (1) */
+$color-secondary-1: #014950;
+$color-secondary-2: #10848f;
+$color-secondary-3: #07626a;
+$color-secondary-4: #002d31;
+$color-secondary-5: #000f10;
+
+// Main tertiary color (2) */
+$color-tertiary-1: #4f7a00;
+$color-tertiary-2: #94da16;
+$color-tertiary-3: #6ba208;
+$color-tertiary-4: #314c00;
+$color-tertiary-5: #101900;
+
+@import url(https://fonts.googleapis.com/css?family=Muli&display-swap);
+
+@font-face {
+  font-family: "handwritten-tomatoes";
+  src: url(/src/assets/static/fonts/handwritten-tomatoes.ttf);
+}
+
+$font-handwritten: "handwritten-tomatoes", sans-serif, system;
+
+$color-pink-1: #ff89a4;
+$color-pink-2: #ff668f;
+$color-pink-3: #ff3a7a;
+$color-pink-4: #d03465;
+$color-pink-5: #a42e50;
+
+$color-blue-1: #a0f0ff;
+$color-blue-2: #82ecff;
+$color-blue-3: #5ae8ff;
+$color-blue-4: #4ebdd0;
+$color-blue-5: #4194a2;
+
+$color-background-1: #86617f;
+$color-background-2: #693e61;
+$color-background-3: #4c1a45;
+$color-background-4: #40183a;
+$color-background-5: #34152f;
