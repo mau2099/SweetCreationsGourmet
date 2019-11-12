@@ -9,6 +9,11 @@ dotenv.config();
 const ENV = process.env.NODE_ENV;
 const PORT = process.env.PORT || 3000;
 
+const DEFAULT_ADMIN_PASSWORD = process.env.DEFAULT_ADMIN_PASSWORD;
+const DEFAULT_USER_PASSWORD = process.env.DEFAULT_USER_PASSWORD;
+const PUBLIC_API_KEY_TOKEN = process.env.PUBLIC_API_KEY_TOKEN;
+const ADMIN_API_KEY_TOKEN = process.env.ADMIN_API_KEY_TOKEN;
+
 const app = express();
 app.use(express.static(`${__dirname}/public`));
 
