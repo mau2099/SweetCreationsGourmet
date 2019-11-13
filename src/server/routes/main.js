@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import { StaticRouter } from 'react-router';
 import { renderRoutes } from 'react-router-config';
 import Routes from '../../frontend/routes/serverRoutes';
-import Layout from '../../frontend/containers/Layout.jsx';
+import Layout from '../../frontend/containers/Layout';
 import reducer from '../../frontend/reducers';
 import initialState from '../../frontend/initialState';
 import render from '../render';

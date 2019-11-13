@@ -3,19 +3,19 @@ import dotenv from 'dotenv';
 import webpack from 'webpack';
 import helmet from 'helmet';
 import main from './routes/main';
+const authApi = require('./routes/auth');
+const notFoundHandler = require('./util/middleware/notFoundHandler');
 
 dotenv.config();
 
 const ENV = process.env.NODE_ENV;
 const PORT = process.env.PORT || 3000;
 
-const DEFAULT_ADMIN_PASSWORD = process.env.DEFAULT_ADMIN_PASSWORD;
-const DEFAULT_USER_PASSWORD = process.env.DEFAULT_USER_PASSWORD;
-const PUBLIC_API_KEY_TOKEN = process.env.PUBLIC_API_KEY_TOKEN;
-const ADMIN_API_KEY_TOKEN = process.env.ADMIN_API_KEY_TOKEN;
-
 const app = express();
+authApi(app);
 app.use(express.static(`${__dirname}/public`));
+// Catch 404
+//app.use(notFoundHandler);
 
 if (ENV === 'development') {
   console.log('Loading dev config');
