@@ -7,8 +7,6 @@ import passport from 'passport';
 import boom from '@hapi/boom';
 import cookieParser from 'cookie-parser';
 import main from './routes/main';
-const authApi = require('./routes/auth');
-const notFoundHandler = require('./util/middleware/notFoundHandler');
 
 dotenv.config();
 
@@ -21,8 +19,6 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(`${__dirname}/public`));
-// Catch 404
-//app.use(notFoundHandler);
 
 // Basic strategy
 require('./utils/auth/strategies/basic');
@@ -57,7 +53,7 @@ app.post('/auth/sign-in', async (req, res, next) => {
         return next(boom.unauthorized());
       }
 
-      req.login(data, { session: false }, async error => {
+      req.login(data, { session: false }, async (error) => {
         if (error) {
           next(error);
         }
@@ -96,7 +92,7 @@ app.post('/auth/sign-up', async (req, res, next) => {
 
 app.get('*', main);
 
-app.listen(PORT, err => {
+app.listen(PORT, (err) => {
   if (err) console.log(err);
   console.log(`Server running on ${PORT}`);
 });
