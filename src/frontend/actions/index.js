@@ -35,6 +35,7 @@ export const getVideoSource = (payload) => ({
   payload,
 });
 
+//REGISTER
 export const registerUser = (payload, redirecUrl) => {
   return (dispatch) => {
     axios
@@ -47,6 +48,7 @@ export const registerUser = (payload, redirecUrl) => {
   };
 };
 
+//LOGIN
 export const loginUser = ({ email, password }, redirecUrl) => {
   return (dispatch) => {
     axios({
@@ -69,3 +71,19 @@ export const loginUser = ({ email, password }, redirecUrl) => {
       .catch((err) => dispatch(setError(err)));
   };
 };
+
+//Pantalla checkout
+export const addToCart = (payload) => ({
+  type: 'ADD_TO_CART',
+  payload,
+});
+
+export const deleteFromCart = (payload) => ({
+  type: 'DELETE_FROM_CART',
+  payload,
+});
+
+export const getTotalPrice = (payload) => ({
+  type: 'GET_TOTALPRICE',
+  payload,
+});

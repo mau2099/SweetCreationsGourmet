@@ -1,3 +1,19 @@
-.filter__container--fixed{
+@import '../Variables.scss';
+
+.filter__container--fixed {
   // position: fixed;
+}
+
+.filter__container {
+  display: flex;
+  flex-direction: column;
+}
+.filter__title {
+  color: $color-blue-5;
+}
+
+.filter__subtitle {
+  color: $color-blue-4;
+}
+.filter__categories {
 }

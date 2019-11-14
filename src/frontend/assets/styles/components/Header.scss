@@ -1,4 +1,5 @@
 @import url(../../css/classy-nav.css);
+@import '../Variables.scss';
 
 /* :: 4.0 Header Area CSS */
 .header_area {
@@ -7,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid $color-pink-3;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
 }
@@ -184,7 +185,7 @@
 .header_area .favourite-area a span,
 .header_area .user-login-info a span,
 .header_area .cart-area a span {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
   color: #0315ff;
   font-weight: 700;
@@ -277,7 +278,7 @@
   max-width: 20px;
 }
 .right-side-cart-area .cart-button a span {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
   color: #0315ff;
   font-weight: 700;
@@ -461,7 +462,7 @@
   .product-image
   .cart-item-desc
   .price {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 0;
@@ -564,7 +565,7 @@
   li
   span:last-child {
   font-weight: 700;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 @media only screen and (max-width: 767px) {
   .right-side-cart-area .cart-content .cart-amount-summary .essence-btn {
