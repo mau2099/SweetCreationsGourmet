@@ -1,0 +1,21 @@
+@import "../Variables.scss";
+
+.product-img {
+  max-width: 250px;
+}
+
+.listProducts__container {
+  padding: 10px;
+  grid-template-columns: minmax(auto, 768px);
+  display: grid;
+  justify-content: center;
+}
+
+.single-product-wrapper {
+    @extend .card;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+  margin: 1em 0.5em;
+}

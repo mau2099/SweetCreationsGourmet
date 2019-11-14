@@ -7,7 +7,7 @@ import "../assets/styles/CoreStyle.scss";
 const Layout = ({ children }) => (
   <>
     <Header />
-    <div className="App__childrenContainer card">{children}</div>
+    <div className="App__childrenContainer">{children}</div>
     <Footer />
   </>
 );
