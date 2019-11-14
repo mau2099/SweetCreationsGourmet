@@ -2,7 +2,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'SET_FAVORITE':
       const exist = false;
-      state.myList.forEach(element => {
+      state.myList.forEach((element) => {
         if (element.id == action.payload.id) {
           exist = true;
         }
@@ -17,7 +17,7 @@ const reducer = (state, action) => {
     case 'DELETE_FAVORITE':
       return {
         ...state,
-        myList: state.myList.filter(items => items.id !== action.payload),
+        myList: state.myList.filter((items) => items.id !== action.payload),
       };
 
     case 'LOGIN_REQUEST':
@@ -40,9 +40,14 @@ const reducer = (state, action) => {
       return {
         ...state,
         playing:
-          state.trends.find(item => item.id === Number(action.payload)) ||
-          state.originals.find(item => item.id === Number(action.payload)) ||
+          state.trends.find((item) => item.id === Number(action.payload)) ||
+          state.originals.find((item) => item.id === Number(action.payload)) ||
           {},
+      };
+    case 'ADD_TO_CART':
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
       };
     default:
       return state;

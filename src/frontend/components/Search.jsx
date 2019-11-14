@@ -1,25 +1,25 @@
-import React from "react";
-import "../assets/styles/components/Search.scss";
-import "../assets/styles/CoreStyle.scss";
-import { Search } from "@material-ui/icons";
+import React from 'react';
+import '../assets/styles/components/Search.scss';
+import '../assets/styles/CoreStyle.scss';
+import { Search } from '@material-ui/icons';
 
 const SearchInput = () => (
-  <section className="searchInput">
-    <div className="search-area">
+  <section className='searchInput'>
+    <div className='search-area'>
       <form
-        action="#"
-        method="post"
+        action='#'
+        method='post'
         onSubmit={(e) => {
           e.preventDefault();
         }}
       >
         <input
-          type="search"
-          name="search"
-          id="headerSearch"
-          placeholder="Type Search"
+          type='search'
+          name='search'
+          id='headerSearch'
+          placeholder='¿Qué te gustaría comer?'
         />
-        <button type="submit">
+        <button type='submit'>
           <Search />
         </button>
       </form>
