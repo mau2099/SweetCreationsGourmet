@@ -39,7 +39,7 @@ module.exports = {
           test(module, chunks) {
             const name = module.nameForCondition && module.nameForCondition();
             return chunks.some(
-              chunks =>
+              (chunks) =>
                 chunks.name !== 'vendor' && /[\\/]node_modules[\\/]/.test(name),
             );
           },
@@ -83,7 +83,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(jpg|png|jpe?g|gif)$/i,
         use: [
           {
             loader: 'file-loader',
