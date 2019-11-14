@@ -11,17 +11,22 @@ import {
 import logo from '../assets/static/images/Logo_SweetCreations.png';
 import SearchInput from './Search';
 
-const Header = () => (
-  <header className="header_area">
-    <div className="classy-nav-container d-flex align-items-center justify-content-between light left breakpoint-on">
-      <nav className="classy-navbar" id="essenceNav">
-        <Link to="/">
-          <img className="header__logo" src={logo} alt="Sweet Creations" />
-        </Link>
-        <Link to="/products">Productos</Link>|
-        <Link to="/productDetail">Detalle de Productos</Link>|
-        <Link to="/categories">Categorias</Link>
-      </nav>
+const Header = (props) => {
+  const { cart } = props;
+  return (
+    <header className='header_area'>
+      <div className='classy-nav-container d-flex align-items-center justify-content-between light left breakpoint-on'>
+        <nav className='classy-navbar' id='essenceNav'>
+          <Link to='/'>
+            <img className='header__logo' src={logo} alt='Sweet Creations' />
+          </Link>
+          <Link to='/products'>Productos</Link>
+|
+          <Link to='/productDetail'>Detalle de Productos</Link>
+|
+          <Link to='/categories'>Categorias</Link>
+        </nav>
+
         <SearchInput />
 
         <div className='header-meta d-flex clearfix justify-content-end'>
