@@ -1,77 +1,67 @@
-import React from "react";
-import "../assets/styles/components/Categories.scss";
+import React from 'react';
+import '../assets/styles/Bootstrap.scss';
 
 const Categories = ({ children, title }) => {
   return (
-    <>
-      <div className="categories">
-        <h3 className="categories__title">{title}</h3>
-        {children}
-      </div>
+    <div className='block-area wrapper wrapper-content animated fadeInRight'>
+      <div className='row'>
+        <div className='col-md-12'>
+          <div className='ibox float-e-margins'>
+            <div className='ibox-title'>
+              <div className='ibox-content'>
 
-      {/* 
-    <div className="widget catagory mb-50">
-        
-        <h6 className="widget-title mb-30">Catagories</h6>
+                <div className='container'>
+                  <h2>Categorias</h2>
+                  <div className='row'>
+                    <div className='col-md-12'>
+                      <button className='btn btn-primary btn-xs'>Nueva Categoria</button>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div className='row'>
+                    <div className='col-md-12'>
+                      <table className='table '>
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th />
+                            <th />
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Galletas</td>
+                            <td>
+                              <a href='' className='btn btn-warning btn-xs'>
+                                <span className='glyphicon glyphicon-pencil' />
+                              </a>
+                            </td>
+                            <td>
+                              <a href='' className='btn btn-danger btn-xs'>
+                                <span className='glyphicon glyphicon-trash' />
+                              </a>
+                            </td>
+                          </tr>
 
-        <div className="catagories-menu">
-            <ul id="menu-content2" className="menu-content collapse show">
-                
-                <li data-toggle="collapse" data-target="#clothing">
-                    <a href="#">clothing</a>
-                    <ul className="sub-menu collapse show" id="clothing">
-                        <Link to="/"
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Bodysuits</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Hoodies &amp; Sweats</a></li>
-                        <li><a href="#">Jackets &amp; Coats</a></li>
-                        <li><a href="#">Jeans</a></li>
-                        <li><a href="#">Pants &amp; Leggings</a></li>
-                        <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                        <li><a href="#">Shirts &amp; Blouses</a></li>
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Sweaters &amp; Knits</a></li>
-                    </ul>
-                </li>
-                
-                <li data-toggle="collapse" data-target="#shoes" className="collapsed">
-                    <a href="#">shoes</a>
-                    <ul className="sub-menu collapse" id="shoes">
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Bodysuits</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Hoodies &amp; Sweats</a></li>
-                        <li><a href="#">Jackets &amp; Coats</a></li>
-                        <li><a href="#">Jeans</a></li>
-                        <li><a href="#">Pants &amp; Leggings</a></li>
-                        <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                        <li><a href="#">Shirts &amp; Blouses</a></li>
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Sweaters &amp; Knits</a></li>
-                    </ul>
-                </li>
-                
-                <li data-toggle="collapse" data-target="#accessories" className="collapsed">
-                    <a href="#">accessories</a>
-                    <ul className="sub-menu collapse" id="accessories">
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Bodysuits</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Hoodies &amp; Sweats</a></li>
-                        <li><a href="#">Jackets &amp; Coats</a></li>
-                        <li><a href="#">Jeans</a></li>
-                        <li><a href="#">Pants &amp; Leggings</a></li>
-                        <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                        <li><a href="#">Shirts &amp; Blouses</a></li>
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Sweaters &amp; Knits</a></li>
-                    </ul>
-                </li>
-            </ul>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div className='row'>
+                    <div className='col-md-12'>
+                      <button className='btn btn-primary btn-xs'>Nueva Categoria</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div> */}
-    </>
+      </div>
+    </div>
   );
 };
 
