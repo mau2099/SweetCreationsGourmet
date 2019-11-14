@@ -21,6 +21,10 @@ const Header = (props) => {
             <img className='header__logo' src={logo} alt='Sweet Creations' />
           </Link>
           <Link to='/products'>Productos</Link>
+|
+          <Link to='/productDetail'>Detalle de Productos</Link>
+|
+          <Link to='/categories'>Categorias</Link>
         </nav>
 
         <SearchInput />
