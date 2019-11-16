@@ -10,6 +10,9 @@ import Categories from '../components/Categories';
 import CategoriesFormNew from '../components/CategoriesFormNew';
 import CategoriesFormEdit from '../components/CategoriesFormEdit';
 import Flavors from '../components/Flavors';
+import History from '../components/History';
+import User from '../components/User';
+import UserFormNew from '../components/UserFormNew';
 import FlavorsFormNew from '../components/FlavorsFormNew';
 import FlavorsFormEdit from '../components/FlavorsFormEdit';
 import ListProducts from '../containers/ListProducts';
@@ -30,6 +33,9 @@ const App = ({ isLogged }) => (
         <Route exact path='/categories' component={Categories} />
         <Route exact path='/categoriesFormNew' component={CategoriesFormNew} />
         <Route exact path='/categoriesFormEdit' component={CategoriesFormEdit} />
+        <Route exact path='/history' component={History} />
+        <Route exact path='/user' component={User} />
+        <Route exact path='/userFormNew' component={UserFormNew} />
         <Route exact path='/flavors' component={Flavors} />
         <Route exact path='/flavorsFormNew' component={FlavorsFormNew} />
         <Route exact path='/flavorsFormEdit' component={FlavorsFormEdit} />
