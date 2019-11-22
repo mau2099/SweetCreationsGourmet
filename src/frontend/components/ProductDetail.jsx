@@ -1,13 +1,41 @@
 import React from 'react';
 import '../assets/styles/Bootstrap.scss';
+import { connect } from 'react-redux';
 import swal from 'sweetalert';
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
+  const { products } = props;
+
   function formulario_new(e) {
     window.location.assign('/productFormNew');
     //swal("Good job!", "You clicked the button!", "success");
   };
+
+  function edit_product() {
+    window.location.assign('/productFormEdit');
+  }
+
+  function delete_product() {
+    swal({
+      title: '¿Estas seguro de eliminar el producto?',
+      text: 'Una vez eliminado, no podra recuperar este producto!',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal('Ops! Su producto ha sido eliminado!', {
+            icon: 'success',
+          });
+          window.location.assign('/productDetail');
+        } else {
+          swal('Tu producto sigue intacto!');
+        }
+      });
+  }
   return (
+
     <div className='block-area wrapper wrapper-content animated fadeInRight'>
       <div className='row'>
         <div className='col-md-12'>
@@ -25,81 +53,37 @@ const ProductDetail = () => {
                   <br />
                   <br />
                   <div className='row'>
-                    <div className='col-sm-4'>
-                      <div className='thumbnail'>
-                        <h5>IMG</h5>
-                        <div className='caption'>
-                          <h1>Galletas</h1>
-                          <p>
-                            <div>
-                              <ol>
-                                <li>Descripción</li>
-                                <li>Costo</li>
-                                <li>Cantidad</li>
-                              </ol>
-                            </div>
-                          </p>
-                          <p>
-                            <a href='' className='btn btn-warning btn-xs'>
-                              <span className='glyphicon glyphicon-pencil' />
-                            </a>
-                            <a href='' className='btn btn-danger btn-xs'>
-                              <span className='glyphicon glyphicon-trash' />
-                            </a>
-                          </p>
+                    {products.map((product) => (
+                      <div className='col-sm-4'>
+                        <div className='thumbnail'>
+                          <h1>
+                            <img src={product.image} alt='' />
+                          </h1>
+                          <div className='caption'>
+                            <h5>{product.title}</h5>
+                            <p>
+                              <>
+                                <ol>
+                                  <li>{product.description}</li>
+                                  <li>
+$
+                                    {product.price}
+                                  </li>
+                                </ol>
+                              </>
+                            </p>
+                            <p>
+                              <a className='btn btn-warning btn-xs' onClick={edit_product}>
+                                <span className='glyphicon glyphicon-pencil' />
+                              </a>
+                              <a className='btn btn-danger btn-xs' onClick={delete_product}>
+                                <span className='glyphicon glyphicon-trash' />
+                              </a>
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className='col-sm-4'>
-                      <div className='thumbnail'>
-                        <h5>IMG</h5>
-                        <div className='caption'>
-                          <h1>Muffins</h1>
-                          <p>
-                            <div>
-                              <ol>
-                                <li>Descripción</li>
-                                <li>Costo</li>
-                                <li>Cantidad</li>
-                              </ol>
-                            </div>
-                          </p>
-                          <p>
-                            <a href='' className='btn btn-warning btn-xs'>
-                              <span className='glyphicon glyphicon-pencil' />
-                            </a>
-                            <a href='' className='btn btn-danger btn-xs'>
-                              <span className='glyphicon glyphicon-trash' />
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className='col-sm-4'>
-                      <div className='thumbnail'>
-                        <h5>IMG</h5>
-                        <div className='caption'>
-                          <h1>Cupcake</h1>
-                          <p>
-                            <div>
-                              <ol>
-                                <li>Descripción</li>
-                                <li>Costo</li>
-                                <li>Cantidad</li>
-                              </ol>
-                            </div>
-                          </p>
-                          <p>
-                            <a href='/products/' className='btn btn-warning btn-xs'>
-                              <span className='glyphicon glyphicon-pencil' />
-                            </a>
-                            <a href='' className='btn btn-danger btn-xs'>
-                              <span className='glyphicon glyphicon-trash' />
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                   <br />
                   <br />
@@ -118,4 +102,11 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+const mapStateToProps = (state) => {
+  return {
+    products: state.products,
+    totalPrice: state.totalPrice,
+  };
+};
+
+export default connect(mapStateToProps)(ProductDetail);

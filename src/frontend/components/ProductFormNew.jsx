@@ -13,19 +13,6 @@ const ProductFormNew = () => {
     swal("Buen trabajo!", "Producto Guardado!", "success");
     window.location.assign('/productDetail');
   };
-  /*
-  function valores(){
-    fetch('',{
-      method: 'POST',
-      body: JSON.stringify()
-    })
-    .then(json => json.response)
-    .then(json)
-    .catch(error => console.log(`${error}`));
-
-  };
-  */
-
   return (
     <div className='block-area wrapper wrapper-content animated fadeInRight'>
       <div className='row'>
@@ -40,7 +27,7 @@ const ProductFormNew = () => {
                     <div className='row'>
                       <div className='col-md-12'>
                         <div className='form-group'>
-                          <button className='btn btn-primary btn-xs' onClick={save_products}>Nuevo Producto</button> | <a href="#" onClick={index_products} className='btn btn-warning btn-xs'>Cancelar</a>
+                          <button className='btn btn-primary btn-xs' onClick={save_products}>Nuevo Producto</button> | <a onClick={index_products} className='btn btn-warning btn-xs'>Cancelar</a>
                         </div>
                       </div>
                     </div>
@@ -121,7 +108,7 @@ const ProductFormNew = () => {
                     <div className='row'>
                       <div className='col-md-12'>
                         <div className='form-group'>
-                          <button className='btn btn-primary btn-xs'>Nuevo Producto</button> | <a href="#" onClick={index_products} className='btn btn-warning btn-xs'>Cancelar</a>
+                        <button className='btn btn-primary btn-xs' onClick={save_products}>Nuevo Producto</button> | <a onClick={index_products} className='btn btn-warning btn-xs'>Cancelar</a>
                         </div>
                       </div>
                     </div>
