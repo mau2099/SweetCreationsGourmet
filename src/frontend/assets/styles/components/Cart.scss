@@ -1,0 +1,38 @@
+@import '../Variables.scss';
+
+.overflow--hidden {
+  overflow: hidden;
+  outline: none;
+}
+.cartitem-container {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cart-image {
+  max-width: 50px;
+  max-height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.delete-button {
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  -webkit-box-flex: 0;
+  flex: 0 0 90px;
+  width: 90px;
+  display: block;
+  text-align: center;
+  border: none;
+  height: 100%;
+  line-height: 80px;
+  background: transparent;
+  &:hover {
+    color: $color-blue-4;
+  }
+  &:focus {
+    outline: none;
+  }
+}

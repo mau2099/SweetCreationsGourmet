@@ -19,7 +19,7 @@ const serverRoutes = (isLogged) => {
   return [
     {
       path: '/',
-      component: isLogged ? Home : Login,
+      component: Home,
       exact: true,
     },
     {
@@ -89,7 +89,7 @@ const serverRoutes = (isLogged) => {
     },
     {
       path: '/checkout',
-      component: Checkout,
+      component: isLogged ? Checkout : Login,
       exact: true,
     },
     {

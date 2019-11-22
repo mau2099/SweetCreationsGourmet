@@ -1,7 +1,6 @@
 import React from 'react';
 import '../assets/styles/App.scss';
 import { Link } from 'react-router-dom';
-import { linen } from 'color-name';
 import {
   FavoriteBorder,
   AddCircle,
@@ -10,12 +9,6 @@ import {
 import { connect } from 'react-redux';
 import { addToCart, getTotalPrice } from '../actions';
 import Filter from '../components/Filter';
-import imgCupcake from '../assets/img/cupcakes/red-velvet-cupcake.jpg';
-import imgCupcake2 from '../assets/img/cupcakes/chai-latte-cupcakes.jpg';
-import imgCupcake3 from '../assets/img/cupcakes/cookies-cupcake.png';
-import imgCupcake4 from '../assets/img/cupcakes/rosa-cupcake.jpg';
-import imgCupcake5 from '../assets/img/cupcakes/unicorn-cupcake.jpg';
-import imgCupcake6 from '../assets/img/cupcakes/vainilla-cupcake.jpg';
 
 import '../assets/styles/CoreStyle.scss';
 import '../assets/styles/components/ListProducts.scss';
@@ -41,20 +34,19 @@ const ListProducts = (props) => {
 
               <img className='hover-img' src={product.image} alt='' />
 
-              <div className='product-favourite'>
+              {/* <div className='product-favourite'>
                 <Link to='/login'>
                   <FavoriteBorder />
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             <div className='product-description'>
-              <span>{product.title}</span>
               <Link to='/productDetail/'>
-                <h6>{product.description}</h6>
+                <h6>{product.title}</h6>
+                <span>{product.description}</span>
+                <h5 className='product-price'>${product.price}</h5>
               </Link>
-
-              <p className='product-price'>${product.price}</p>
 
               <div className='hover-content'>
                 <div className='add-to-cart-btn'>

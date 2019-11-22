@@ -100,6 +100,7 @@ _Modify webpack.config.js_ in order to accept routes in **dev environment**
 
 - [Palette Colors](COLORS.md)
 - [AdobeXD Mockup]()
+- [Checkout Template](https://material-ui.com/getting-started/templates/checkout/)
 
 ---
 

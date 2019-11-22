@@ -1,14 +1,15 @@
 @import '../Variables.scss';
 
 .product-img {
-  max-width: 250px;
+  margin: 0 auto;
+  max-width: 150px;
   max-height: 150px;
   min-height: 150px;
 }
 
 .listProducts__container {
   padding: 10px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   display: grid;
   //   justify-content: center;
 }

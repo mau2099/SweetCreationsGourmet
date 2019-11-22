@@ -30,6 +30,7 @@ const main = async (req, res, next) => {
         },
         cart: [],
         products: productList.filter((product) => product),
+        sidebarisOpen: false,
       };
     } catch (err) {
       console.log(err);
