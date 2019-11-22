@@ -25,7 +25,7 @@ const App = ({ isLogged }) => (
   <BrowserRouter>
     <Layout>
       <Switch>
-        <Route exact path='/' component={isLogged ? Home : Login} />
+        <Route exact path='/' component={isLogged ? ListProducts : Login} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
         <Route exact path='/products' component={ListProducts} />

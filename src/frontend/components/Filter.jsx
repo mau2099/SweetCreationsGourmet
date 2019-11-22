@@ -8,12 +8,12 @@ import { CheckBoxOutlineBlank, Check } from '@material-ui/icons';
 
 const Filter = () => {
   return (
-    <section className='filter__container--fixed col-12 col-sm-3'>
-      <h5 className='filter__title'>¿Como te gusta tu postre?</h5>
+    <section className='filter__container col-12 col-sm-3'>
+      <h5 className='filter__title'>Encuentra tu postre</h5>
       <div className='widget price'>
         <h6 className='filter__subtitle'>Precios</h6>
         <Slider
-          //value='100' //{value}
+          value='43' //{value}
           //onChange={handleChange}
           valueLabelDisplay='auto'
           aria-labelledby='range-slider'
@@ -21,7 +21,7 @@ const Filter = () => {
         />
       </div>
       <Divider />
-      <div className='filter__container'>
+      <div className='widget presentation'>
         <h6 className='filter__subtitle'>Presentación</h6>
 
         <FormControlLabel
@@ -65,7 +65,7 @@ const Filter = () => {
         />
       </div>
       <Divider />
-      <div className='filter__container'>
+      <div className='widget flavor'>
         <h6 className='filter__subtitle'>Sabor</h6>
 
         <FormControlLabel

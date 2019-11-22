@@ -9,8 +9,8 @@
   left: 0;
   width: 100%;
   border-bottom: 1px solid $color-pink-3;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
 }
 @media only screen and (max-width: 767px) {
   .header_area .classy-nav-container {
@@ -93,7 +93,7 @@
 .header_area .search-area form input {
   border: none;
   background-color: #ffffff;
-  width: 200px;
+  width: 40px;
   height: 85px;
   padding: 0 15px 0 60px;
   color: #787878;
@@ -101,17 +101,19 @@
   font-weight: 500;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
+  // background-color: #eee;
 }
 @media only screen and (max-width: 767px) {
   .header_area .search-area form input {
-    width: 170px;
+    width: 250px;
     height: 40px;
     padding: 0 10px 0 30px;
   }
 }
 .header_area .search-area form input:focus {
   outline: none !important;
-  width: 350px;
+  width: 400px;
+  background-color: white;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header_area .search-area form input:focus {
@@ -233,6 +235,34 @@
   -webkit-transition-duration: 800ms;
   transition-duration: 800ms;
 }
+
+.cart-area {
+  button {
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    -webkit-box-flex: 0;
+    flex: 0 0 90px;
+    width: 90px;
+    display: block;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    height: 100%;
+    line-height: 80px;
+    background: transparent;
+    &:hover {
+      color: $color-blue-4;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.Header-alert {
+  position: absolute;
+  top: -1em;
+  right: 1em;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .right-side-cart-area {
     width: 500px;
@@ -320,8 +350,8 @@
 .right-side-cart-area .cart-content .cart-list .single-cart-item {
   position: relative;
   z-index: 1;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
 }
 .right-side-cart-area
   .cart-content
@@ -345,8 +375,8 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 50px 15px 15px;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
 }
 @media only screen and (max-width: 767px) {
   .right-side-cart-area

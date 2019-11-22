@@ -10,9 +10,27 @@ import {
 } from '@material-ui/icons';
 import logo from '../assets/static/images/Logo_SweetCreations.png';
 import SearchInput from './Search';
+import Cart from './Cart';
+import PositionedSnackbar from './PositionedSnackbar';
+import { toggleDrawer } from '../actions';
 
 const Header = (props) => {
-  const { cart } = props;
+  const { cart, sidebarisOpen } = props;
+
+  const handleOpenCart = (open) => (event) => {
+    if (cart.length === 0) {
+      return;
+    }
+
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+    props.toggleDrawer(open);
+  };
+
   return (
     <header className='header_area'>
       <div className='classy-nav-container d-flex align-items-center justify-content-between light left breakpoint-on'>
@@ -20,18 +38,15 @@ const Header = (props) => {
           <Link to='/'>
             <img className='header__logo' src={logo} alt='Sweet Creations' />
           </Link>
-          <Link to='/products'>Productos</Link>
-|
-          <Link to='/productDetail'>Detalle de Productos</Link>
-|
-          <Link to='/categories'>Categorias</Link>
+          {/*<Link to='/products'>Productos</Link>|
+           <Link to='/productDetail'>Detalle de Productos</Link>|
+          <Link to='/categories'>Categorias</Link> */}
         </nav>
-
         <SearchInput />
 
         <div className='header-meta d-flex clearfix justify-content-end'>
           <div className='favourite-area'>
-            <Link to='/register'>
+            <Link to='#'>
               <FavoriteBorder />
             </Link>
           </div>
@@ -41,14 +56,19 @@ const Header = (props) => {
             </Link>
           </div>
           <div className='cart-area'>
-            <Link to='/cart'>
+            {sidebarisOpen && <Cart />}
+            <button
+              className='cart-button'
+              onClick={handleOpenCart(true)}
+              type='button'
+            >
               <ShoppingBasketOutlined />
               <span>
                 {cart.length > 0 && (
                   <div className='Header-alert'>{cart.length}</div>
                 )}
               </span>
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -59,7 +79,12 @@ const Header = (props) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
+    sidebarisOpen: state.sidebarisOpen,
   };
 };
 
-export default connect(mapStateToProps, null)(Header);
+const mapDispatchToProps = {
+  toggleDrawer,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -72,7 +72,11 @@ export const loginUser = ({ email, password }, redirecUrl) => {
   };
 };
 
-//Pantalla checkout
+//Pantalla Carrito de Compra - Cart
+export const toggleDrawer = (payload) => ({
+  type: 'TOGGLE_DRAWER',
+  payload,
+});
 export const addToCart = (payload) => ({
   type: 'ADD_TO_CART',
   payload,

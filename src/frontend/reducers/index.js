@@ -44,10 +44,21 @@ const reducer = (state, action) => {
           state.originals.find((item) => item.id === Number(action.payload)) ||
           {},
       };
+    case 'TOGGLE_DRAWER':
+      return {
+        ...state,
+        sidebarisOpen: action.payload,
+      };
     case 'ADD_TO_CART':
       return {
         ...state,
         cart: [...state.cart, action.payload],
+      };
+    case 'DELETE_FROM_CART':
+      console.log('action toggle drawer', action);
+      return {
+        ...state,
+        cart: state.cart.filter((items) => items.id !== action.payload.id),
       };
     default:
       return state;

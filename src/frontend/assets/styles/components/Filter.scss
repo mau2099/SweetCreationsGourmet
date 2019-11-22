@@ -7,6 +7,7 @@
 .filter__container {
   display: flex;
   flex-direction: column;
+  padding-left: 1.5em;
 }
 .filter__title {
   color: $color-blue-5;
@@ -16,4 +17,10 @@
   color: $color-blue-4;
 }
 .filter__checkbox {
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5em;
 }
