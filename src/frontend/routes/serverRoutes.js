@@ -8,6 +8,9 @@ import ProductsFormNew from '../components/ProductFormNew';
 import Categories from '../components/Categories';
 import CategoriesFormNew from '../components/CategoriesFormNew';
 import CategoriesFormEdit from '../components/CategoriesFormEdit';
+import History from '../components/History';
+import User from '../components/User';
+import UserFormNew from '../components/UserFormNew';
 import Flavors from '../components/Flavors';
 import FlavorsFormNew from '../components/FlavorsFormNew';
 import FlavorsFormEdit from '../components/FlavorsFormEdit';
@@ -80,6 +83,21 @@ const serverRoutes = (isLogged) => {
     {
       path: '/productDetail',
       component: ProductDetail,
+      exact: true,
+    },
+    {
+      path: '/history',
+      component: History,
+      exact: true,
+    },
+    {
+      path: '/user',
+      component: User,
+      exact: true,
+    },
+    {
+      path: '/userFormNew',
+      component: UserFormNew,
       exact: true,
     },
     {
