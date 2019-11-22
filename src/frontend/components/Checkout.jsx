@@ -162,4 +162,4 @@ const Checkout = (props) => {
   );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Checkout);
+export default Checkout;
