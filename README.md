@@ -90,6 +90,10 @@ _Modify webpack.config.js_ in order to accept routes in **dev environment**
 
 `npm i react-hot-loader babel-plugin-transform-object-assign babel-plugin-transform-class-properties`
 
+### Sweet Alert
+
+`npm install sweetalert --save`
+
 ### Git
 
 #### Create a new brach
