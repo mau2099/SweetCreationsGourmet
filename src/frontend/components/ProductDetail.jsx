@@ -1,7 +1,12 @@
 import React from 'react';
 import '../assets/styles/Bootstrap.scss';
+import swal from 'sweetalert';
 
 const ProductDetail = () => {
+  function formulario_new(e) {
+    window.location.assign('/productFormNew');
+    //swal("Good job!", "You clicked the button!", "success");
+  };
   return (
     <div className='block-area wrapper wrapper-content animated fadeInRight'>
       <div className='row'>
@@ -14,7 +19,7 @@ const ProductDetail = () => {
                   <h2>Productos</h2>
                   <div className='row'>
                     <div className='col-md-12'>
-                      <button className='btn btn-primary btn-xs'>Nuevo Producto</button>
+                      <button className='btn btn-primary btn-xs' onClick={formulario_new}>Nuevo Producto</button>
                     </div>
                   </div>
                   <br />
@@ -100,7 +105,7 @@ const ProductDetail = () => {
                   <br />
                   <div className='row'>
                     <div className='col-md-12'>
-                      <button className='btn btn-primary btn-xs'>Nuevo Producto</button>
+                      <button className='btn btn-primary btn-xs' onClick={formulario_new}>Nuevo Producto</button>
                     </div>
                   </div>
                 </div>
