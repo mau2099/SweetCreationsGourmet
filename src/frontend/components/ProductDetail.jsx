@@ -7,8 +7,7 @@ const ProductDetail = (props) => {
   const { products } = props;
 
   function formulario_new(e) {
-    window.location.assign('/productFormNew');
-    //swal("Good job!", "You clicked the button!", "success");
+    window.location.assign('/productFormNew');    
   };
 
   function edit_product() {
