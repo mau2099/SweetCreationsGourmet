@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import '../assets/styles/Bootstrap.scss';
-import { TheatersRounded } from '@material-ui/icons';
 
 const ProductFormNew = () => {
   function index_products(e) {
@@ -10,7 +9,7 @@ const ProductFormNew = () => {
   };
 
   function save_products(e) {
-    swal("Buen trabajo!", "Producto Guardado!", "success");
+    swal('Buen trabajo!', 'Producto Guardado!', 'success');
     window.location.assign('/productDetail');
   };
   return (
@@ -22,19 +21,23 @@ const ProductFormNew = () => {
               <div className='ibox-content'>
                 <br />
                 <br />
-                <div className='container' className='form-horizontal'>
-                  
+                <div className='container'>
+                  <div className='container form-horizontal'>
                     <div className='row'>
-                      <div className='col-md-12'>
+                    <div className='col-md-12'>
                         <div className='form-group'>
-                          <button className='btn btn-primary btn-xs' onClick={save_products}>Nuevo Producto</button> | <a onClick={index_products} className='btn btn-warning btn-xs'>Cancelar</a>
+                          <button className='btn btn-primary btn-xs' onClick={save_products}>Nuevo Producto</button>
+{' '}
+|
+{' '}
+<a onClick={index_products} className='btn btn-warning btn-xs'>Cancelar</a>
                         </div>
                       </div>
-                    </div>
+                  </div>
                     <br />
                     <fieldset>
-                      <legend>Nuevo Producto</legend>
-                      <div className='row'>
+                    <legend>Nuevo Producto</legend>
+                    <div className='row'>
 
                         <div className='form-group col-md-6'>
                           <div className='col-lg-10'>
@@ -104,15 +107,19 @@ const ProductFormNew = () => {
                           </div>
                         </div>
                       </div>
-                    </fieldset>
+                  </fieldset>
                     <div className='row'>
-                      <div className='col-md-12'>
+                    <div className='col-md-12'>
                         <div className='form-group'>
-                        <button className='btn btn-primary btn-xs' onClick={save_products}>Nuevo Producto</button> | <a onClick={index_products} className='btn btn-warning btn-xs'>Cancelar</a>
+                          <button className='btn btn-primary btn-xs' onClick={save_products}>Nuevo Producto</button>
+{' '}
+|
+{' '}
+<a onClick={index_products} className='btn btn-warning btn-xs'>Cancelar</a>
                         </div>
                       </div>
-                    </div>
-                  
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
