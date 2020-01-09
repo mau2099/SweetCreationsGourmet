@@ -4,6 +4,10 @@
 
 eCommerce demo developed based on [Platzi - Professional Javascript Career](https://platzi.com/clases/1711-escuela-de-javascript/22875-e-commerce/)
 
+<img src="https://drive.google.com/file/d/1AAYmjufZEi824TeLd90DWs_wwIdakAg9/view"
+     alt="eCommerce"
+     style="float: left; margin-right: 10px;" />
+     
 **_Developed from scratch_**
 
 Based on different eCommerce such as:
