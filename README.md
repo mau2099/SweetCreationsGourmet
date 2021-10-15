@@ -12,8 +12,8 @@ eCommerce demo developed based on [Platzi - Professional Javascript Career](http
 
 Based on different eCommerce such as:
 
-- [Costco](costco.com.mx)
-- [Amazon](amazon.com.mx)
+- [Costco](https://costco.com.mx)
+- [Amazon](https://amazon.com.mx)
 
 ---
 
